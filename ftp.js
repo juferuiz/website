@@ -2,13 +2,9 @@ var Deploy = require('ftp-deploy');
 var ftpDeploy = new Deploy();
 var config = {
     // Dev ->
-    host: "ftp.thewrteam.in",
-    user: "u863526903.devegrocer",
-    password: "Wrteam@123456",
-    //Live ->
-    // host: "193.203.162.252",
-    // user: "egrocerweb",
-    // password: "Wrteam@123",
+    host: "",
+    user: "",
+    password: "",
     port: 21,
     localRoot: __dirname + '/build',
     remoteRoot: '/',

@@ -30,8 +30,10 @@ const PayPalPaymentHandler = () => {
     const [timer, setTimer] = useState(5);
     const interval = useRef();
     const timeout = useRef();
-    // https://devegrocer.thewrteam.in/web-payment-status?order_id=wallet-20240509133121-32&status_code=200&transaction_status=capture
-    // https://devegrocer.thewrteam.in/web-payment-status?status=PAYMENT_SUCCESS&type=order&payment_method=Phonepe
+    // https://your.website.com/web-payment-status?order_id=wallet-20240509133121-32&status_code=200&transaction_status=capture
+    // https://your.website.com/web-payment-status?status=PAYMENT_SUCCESS&type=order&payment_method=Phonepe
+    //https://your.website.com/web-payment-status?status=success&type=wallet&payment_method=Cashfree
+    //https://your.website.com/web-payment-status?status=failed&type=order&payment_method=Cashfree
     useEffect(() => {
         let intervalId;
         if (queryParamsObj.status == "PAYMENT_SUCCESS" && queryParamsObj.type == "wallet" && queryParamsObj.payment_method == "Phonepe") {
